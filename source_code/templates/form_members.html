@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ACTION Members</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">TP4 DPBO</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Data Pembelian</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                            <a class="nav-link" href="">Tambah Pembelian</a>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.php">Data Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="makanan.php">Data Makanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-lg-6 m-auto">
+
+        <form method="post" action="formMembers.php">
+
+            <br><br>
+            <div class="card">
+
+                <input type="text" name="id_members" class="form-control" value="VAL_ID" hidden />
+
+                <div class="card-header bg-primary">
+                    <h1 class="text-white text-center"> ACTION Data TITLE </h1>
+                </div><br>
+                <label> NAME: </label>
+                <input type="text" name="name" class="form-control" value="VAL_NAMA" required />
+                <br />
+
+                <label> EMAIL: </label>
+                <input type="text" name="email" class="form-control" value="VAL_EMAIL" required />
+                <br />
+
+                <label> PHONE: </label>
+                <input type="text" name="phone" class="form-control" value="VAL_PHONE" required />
+                <br />
+
+                <label> JOIN DATE: </label>
+                <input type="date" name="join_date" class="form-control" value="VAL_JOIN_DATE" required />
+                <br />
+
+                <label> MAKANAN FAVORIT: </label>
+                <select class="form-select" id="makanan_fav" name="makanan_fav" required>
+                    <option value=''>-- Pilih Makanan Favorit --</option>
+                    MAKANAN_OPTIONS
+                </select>
+
+                <br />
+
+                <button class=" btn btn-success" type="submit" name="BUTTON_NAME"> ACTION </button><br>
+                <a class="btn btn-info" type="submit" name="cancel" href="index.php"> Cancel </a><br>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
